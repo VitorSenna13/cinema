@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-pagina:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #181818;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: tomato;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(228, 66, 37);
+}
+
+body{
+    background-color: #030303;
+}
+
+.menu_mobile_ativado{
+    display: flex !important;
+    z-index: 2;
+}
+
+.menu_mobile{
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: #101010;
+    margin-top: -40px;
+}
+
+.menu_mobile ul{
+    width: 100%;
+}
+
+.menu_mobile ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #000;
+}
+
+.menu_mobile ul a{
+    text-decoration: none;
+    font-family: var(--font-pagina);
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu_container .hamburger{
+    display: none;
+}
+
+.menu_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #181818;
+    margin-bottom: 40px;
+}
+
+.menu_container .logo{
+    width: 150px;
+    height: 70px;
+    margin-right: 30px;
+}
+
+.menu_container .logo img{
+    width: 150px;
+    height: 70px;
+}
+
+
+.menu_container ul{
+    display: flex;
+    margin-right: 100px;
+}
+
+.menu_container ul li{
+    margin-left: 20px;
+    list-style: none;
+}
+
+.menu_container ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.5s;
+    font-family: var(--font-pagina);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu_container ul li a:hover{
+    color: rgb(228, 66, 37);
+}
+
+.container_info{
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+
+.container_info span{
+    color: #fff;
+    font-size: 30px;
+    font-family: var(--font-pagina);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    border-bottom: 5px solid #ffff;
+}
+
+.container_info .container_filiais{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.container_info .container_filiais span{
+    font-size: 20px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+.container_info .container_filiais div{
+    display: flex;
+}
+
+.container_info .container_filiais div img{
+    width: 25px;
+    height: 25px;
+}
+
+.container_info .container_filiais div span{
+    font-size: 20px;
+    color: #fff;
+    margin-left: 5px;
+    text-transform: none;
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #181818;
+    width: 100%;
+    height: 200px;
+}
+
+footer .redes_sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80px;
+    border-bottom: 1px solid #fff;
+}
+
+footer .redes_sociais img{
+    margin: 0 8px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+}
+
+footer .redes_sociais img:hover{
+    transform: translateY(-3px);
+}
+
+footer .page_links{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .page_links a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .page_links span{
+    margin: 0 8px;
+    font-family: var(--font-pagina);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .menu_container .hamburger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .menu_container .hamburger img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu_container{
+        justify-content: space-between;
+    }
+
+    .menu_container .logo{
+        margin-left: 20px;
+    }
+
+    .menu_container ul{
+        display: none;
+        margin-right: 0;
+    }
+
+    .container_info .container_filiais{
+        width: 100%;
+        padding-left: 30px;
+    }
+}
